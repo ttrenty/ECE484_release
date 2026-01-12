@@ -32,8 +32,8 @@ By completing this assignment, you will be able to:
 
 ## 2 — Development Environment Setup
 
+We use **pixi** (a modern conda-style dependencies manager) for reproducible environments and tests.
 You may choose to work **remotely** in GitHub Codespaces by following the steps in **2.1**, or choose to set up a **local** development environment on your machine by following the steps in **2.2**.
-We use **pixi** (a modern conda-style dependencies manager) for reproducible environments.
 
 ***
 
@@ -43,6 +43,11 @@ We use **pixi** (a modern conda-style dependencies manager) for reproducible env
 2. Wait for setup. The image includes `pixi`, and dependencies for the current assignment will install automatically on first run.
 
 > GitHub Codespaces are currently limited to 120 hours/month per account. If you run out of hours, you can switch to local setup or another online development environment of your choice.
+
+Possible issues you may encounter:
+
+- GitHub might get stuck on "Opening codespaces" after you complete step 1. If this happens, try closing and reopening the **Code → Codespaces** menu, or try reloading the page.
+-  You may encounter the same issue described here: [Codespaces opens then fails saying "Oh no, it looks like you're offline!"](https://github.com/orgs/community/discussions/170375). Follow the instruction described in that link to disable your browser's tracking prevention for your codespace's URL.
 
 ***
 
