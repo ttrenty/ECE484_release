@@ -32,7 +32,7 @@ def build_target_state_qiskit(theta: float, phi: float) -> np.ndarray:
     # - RY(theta) on qubit 0 to set amplitudes
     # - CX(0, 1) to entangle
     # - RZ(phi) on qubit 1 for relative phase on |11>
-    # Create a QuantumCircuit with 2 qubits and apply gates on it using methods like ry(angle, qubit), cx(control, target), rz(angle, qubit). Then extract the statevector using Statevector.from_instruction()
+    # Create a QuantumCircuit with 2 qubits and apply gates on it using methods like ry(angle, qubit), cx(control, target), rz(angle, qubit). Then extract the statevector using Statevector.from_circuit()
     raise NotImplementedError("build_target_state_qiskit not implemented")
 
 
@@ -43,7 +43,7 @@ def build_target_state_pennylane(theta: float, phi: float) -> np.ndarray:
     """
     # TODO: Implement this function using PennyLane
     # Hint: Use qml.device("default.qubit", wires=2)
-    # Create an inner @qml.qnode decorated function that applies gates (qml.RY, qml.CNOT, qml.RZ) and that returns qml.state()
+    # Create an inner @qml.qnode decorated function that applies gates (qml.RY, qml.CNOT, qml.RZ) and that returns qml.state(). Return its result as applied to theta and phi.
     raise NotImplementedError("build_target_state_pennylane not implemented")
 
 
@@ -57,6 +57,6 @@ def build_target_state_numpy(theta: float, phi: float) -> np.ndarray:
     """
     # TODO (BONUS): Implement this function using only NumPy matrix operations
     # Define the necessary gate matrices: RY, RZ, CX, I2 (2x2 identity). Those can be helper functions.
-    # Start with |00> = [1, 0, 0, 0]
+    # Start with |00> = np.array([1, 0, 0, 0])
     # Hint: Use the helper functions `kron` from utils to create 4x4 matrices (2-qubits gates). Apply gates: kron(RY(theta), I2()), followed by CX, followed by kron(I2(), RZ(phi))
     raise NotImplementedError("build_target_state_numpy (bonus) not implemented")
