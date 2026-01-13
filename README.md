@@ -147,8 +147,6 @@ pixi run tests
 
 The first three questions **Q1–Q3** are **on-paper only** (PDF), then **Q4** introduces Qiskit & PennyLane, and **Q5–Q6** are Qiskit-only.
 
-**Start by filling in your student number in `student_info.yaml` so that random variants can be generated correctly.** Repositories are private, so only you and the instructors can see them.
-
 ***
 
 ### 3.1 — Deliverables
@@ -168,7 +166,6 @@ Expected new files structure:
 
 ```bash
 <your-repository>/
-├── student_info.yaml
 ├── paper/
 │   └── answers.pdf
 └── src/
@@ -335,14 +332,14 @@ Implement in `src/Q4_frameworks.py`:
 
 **Objective.** Implement state preparation circuits for single-qubit states and Bell states, and a helper function to compare unitaries up to global phase. Complete the functions in `src/Q5_synthesis.py`.
 
-1. Implement `prepare_single(theta, phi) -> QuantumCircuit` to prepare $|\psi(\theta,\phi)\rangle$ from **Q1**, starting from state $|0\rangle$, using the $U$ gate, where $U(\theta,\phi,\lambda)$ is the general single-qubit unitary.
+1. Implement `prepare_single(theta, phi) -> QuantumCircuit` to prepare $|\psi(\theta,\phi)\rangle$ from **Q1**, starting from state $|0\rangle$, using the $U$ gate, where $U(\theta,\phi,\lambda)$ is the general single-qubit unitary ([documentation: `qiskit.circuit.library.UGate`](https://quantum.cloud.ibm.com/docs/en/api/qiskit/qiskit.circuit.library.UGate)).
 
 2. Implement `prepare_bell(kind) -> QuantumCircuit` to prepare Bell states from $|00\rangle$ using only gates in the set ${H, X, Z, CX}$:
 
-   * $|\beta_{00}> = |\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt{2}}$
-   * $|\beta_{10}> = |\Phi^-\rangle=\frac{|00\rangle-|11\rangle}{\sqrt{2}}$
-   * $|\beta_{01}> = |\Psi^+\rangle=\frac{|01\rangle+|10\rangle}{\sqrt{2}}$
-   * $|\beta_{11}> = |\Psi^-\rangle=\frac{|01\rangle-|10\rangle}{\sqrt{2}}$
+   * $|\beta_{00}\rangle = |\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt{2}}$
+   * $|\beta_{10}\rangle = |\Phi^-\rangle=\frac{|00\rangle-|11\rangle}{\sqrt{2}}$
+   * $|\beta_{01}\rangle = |\Psi^+\rangle=\frac{|01\rangle+|10\rangle}{\sqrt{2}}$
+   * $|\beta_{11}\rangle = |\Psi^-\rangle=\frac{|01\rangle-|10\rangle}{\sqrt{2}}$
 
 3. Implement `unitary_equal(circA, circB, tol)` to check whether two quantum circuits implement the same unitary, i.e. are equivalent up to a global phase.
     Tips: Read the documentation for `qiskit.quantum_info.Operator` carefully, you only need its constructor and one of its methods to implement this function.

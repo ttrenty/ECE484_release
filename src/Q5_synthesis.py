@@ -25,9 +25,9 @@ def prepare_single(theta: float, phi: float) -> QuantumCircuit:
 def prepare_bell(subscript: str) -> QuantumCircuit:
     """
     subscript in {"00", "10", "01", "11"}, corresponding to Bell states {"phi+", "phi-", "psi+", "psi-"} respectively.
-    
+
     Implement `prepare_bell(subscript) -> QuantumCircuit` to prepare Bell states from $|00\rangle$ using only $H$ and $CX$:
-    
+
     Return:
         QuantumCircuit with 2 qubits and 0 classical bits (no measurements) that prepares the requested Bell state from |00>.
     """

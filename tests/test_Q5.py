@@ -42,14 +42,7 @@ def test_prepare_single_has_correct_gates_for_variant():
 
     # Light structure checks per variant (not exhaustive; stronger checks in hidden tests)
     ops = [inst.operation.name.lower() for inst in qc.data]
-    # if info.variant_synthesis == "A":
-    #     assert "ry" in ops and "rz" in ops
-    # elif info.variant_synthesis == "B":
-    #     # Qiskit 1.1+ has "u"
-    #     assert any(g in ops for g in ("u"))
     assert any(g in ops for g in ("u"))
-    else:
-        pytest.fail(f"Unknown variant_synthesis: {info.variant_synthesis}")
 
 
 def test_bell_states_format():
@@ -85,7 +78,7 @@ def test_bell_states_correctness():
         "11": psi_minus(),
     }
     for subscript, target in targets.items():
-        qc = require_impl(Q5.prepare_bell, kind)
+        qc = require_impl(Q5.prepare_bell, subscript)
         sv = _statevector(qc)
         F = fidelity(sv, target)
         assert F >= 0.999, f"Fidelity for {subscript} was {F}"

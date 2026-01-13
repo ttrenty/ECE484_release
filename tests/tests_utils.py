@@ -6,6 +6,7 @@ from dataclasses import dataclass
 import pytest
 from pathlib import Path
 from typing import Tuple
+import yaml
 
 import numpy as np
 
@@ -26,23 +27,22 @@ except Exception:
 
 @dataclass
 class StudentInfo:
-    student_number: int
+    # student_number: int
     seed: int
-    variant_synthesis: str  # "A" or "B"
+    # variant_synthesis: str  # "A" or "B"
 
 
-def load_student_info(path: str | Path = "student_info.yaml") -> StudentInfo:
-    import yaml  # pinned in env
+def load_student_info(path_seed: str | Path = "random_seed.yaml") -> StudentInfo:
 
-    with open(path, "r", encoding="utf-8") as f:
-        d = yaml.safe_load(f)
-    with open("random_seed.yaml", "r", encoding="utf-8") as f:
+    # with open(path, "r", encoding="utf-8") as f:
+    #     d = yaml.safe_load(f)
+    with open(path_seed, "r", encoding="utf-8") as f:
         d2 = yaml.safe_load(f)
-    variant = "A" if int(d["student_number"]) % 2 == 0 else "B"
+    # variant = "A" if int(d["student_number"]) % 2 == 0 else "B"
     return StudentInfo(
-        student_number=int(d["student_number"]),
+        # student_number=int(d["student_number"]),
         seed=int(d2["seed"]),
-        variant_synthesis=variant,
+        # variant_synthesis=variant,
     )
 
 
