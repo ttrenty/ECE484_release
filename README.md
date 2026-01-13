@@ -128,7 +128,15 @@ cd <your-repository>
 pixi install
 ```
 
-> Dependencies file was created for a linux x86_64 platform, on macOS you may need to update the resolve the dependencies for your platform by running `pixi update --platform osx-64` or `pixi update --platform osx-arm64` (for Apple Silicon Macs). You may need to manually change the platform in `pixi.toml` to `osx-64` or `osx-arm64` before running the install command again.
+> Here’s a corrected and clearer version, keeping the same style but fixing grammar, flow, and a couple of awkward phrases:
+
+> The dependencies file was created for a Linux x86_64 platform. On macOS, you may need to re-resolve the dependencies for your platform by running `pixi update --platform osx-64` or `pixi update --platform osx-arm64` (for Apple Silicon Macs). You may also need to manually change the platform in `pixi.toml` to `osx-64` or `osx-arm64` before running the install command again.
+>
+> If that does not work, try recreating the environment from scratch by deleting `pixi.toml` and `pixi.lock`, then running `pixi init .` followed by `pixi add python` and `pixi add --pypi pennylane qiskit-aer qiskit qiskit-ibm-runtime numpy pytest black ruff pyyaml pytest-xdist qutip qpic`, and in the future run the tests using `pixi run pytest -v -s tests`.
+>
+> If the issue persists, please try an online development environment such as GitHub Codespaces or contact the TAs.
+
+
 ***
 
 ### 2.3 — Verification of the Environment
