@@ -353,10 +353,7 @@ Implement in `src/Q4_frameworks.py`:
 
 #### Q6a — SWAP Test (10)
 
-**Context.** The SWAP test estimates the **overlap** between two pure states $|\psi\rangle$ and $|\phi\rangle$. With an ancilla prepared in $|0\rangle$, after applying the following circuit to the system:
-*insert circuit*
-
-We get:
+**Context.** The SWAP test estimates the **overlap** between two pure states $|\psi\rangle$ and $|\phi\rangle$. With an ancilla prepared in $|0\rangle$, after applying the circuit diagrammed in Q6a_SwapTest.py, we get:
 $P(\text{ancilla}=|0\rangle)=\dfrac{1+|\langle\psi|\phi\rangle|^2}{2}.$
 
 **Objective.** Implement the SWAP test circuit in Qiskit to estimate the overlap between two single-qubit states in `src/Q6a_SwapTest.py`.
@@ -368,11 +365,11 @@ $P(\text{ancilla}=|0\rangle)=\dfrac{1+|\langle\psi|\phi\rangle|^2}{2}.$
 
 #### Q6b — Bernstein–Vazirani (10)
 
-**Context.** Given an oracle that implements a function $f : \{0,1\}^n \rightarrow \{0,1\}$ in which $f(x)$ is promised to be the dot product between $x$ and a secret string $a \in \{0,1\}^n$ modulo 2, the BV algorithm finds the unknown bit-string $a$ in **one query** by preparing Hadamards, querying the oracle once, and measuring the input register.
+**Context.** Given an oracle that implements a function $f : \{0,1\}^n \rightarrow \{0,1\}$ in which $f(x)$ is promised to be the dot product between $x$ and a secret string $a \in \{0,1\}^n$ modulo 2, the Bernstein-Vazirani (BV) algorithm finds the unknown bit-string $a$ in **one query** by preparing Hadamards, querying the oracle once, and measuring the input register.
 
 **Objective.** Complete `bernstein_vazirani()` in `src/Q6b_BernsteinVazirani.py`.
 
 1. Implement `bernstein_vazirani(oracle: QuantumCircuit) -> str` that returns the recovered string `a` after building and running the BV circuit on `AerSimulator` in a noiseless scenario. More information is provided in the python file.
 
-2. Briefly explain why the BV algorithm is more efficient than classical algorithms for this problem. What was not taken into account in the previous implementation that could affect this advantage in practice, and why?
+2. Consider how you would find the secret string $a$ from $f$ using a classical algorithm. In what way is the BV algorithm more efficient than a classical algorithm for this problem? Is there any part of your BV implementation implementation that could affect this advantage in practice, and why?
 
