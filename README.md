@@ -288,8 +288,8 @@ You may only use the gate set ${CX, R_Z, R_X}$ and start from the **initial quan
 
 1. **Circuit design.** Propose a circuit that prepares $|\Psi(\theta,\phi)\rangle$ from $|00\rangle$.
 
-   1. Draw the circuit. If using LaTeX, you may want to use the `quantikz` package. You may also want to use the `qpic` tool.
-   2. Give a short step-by-step explanation at the level of *state evolution* (you may describe key steps in words, not full tensor-product expansion).
+   1. Draw the circuit. If using LaTeX, you may want to use the `quantikz` package. You may also want to use [qpic](https://github.com/qpic/qpic), a python tool to quickly generate tikz/png/pdf circuits using simple instructions.
+   2. Give a short step-by-step explanation about how the state evolves over time. (You may describe key steps in words rather than precise mathematical formulas.)
 
 ***
 
