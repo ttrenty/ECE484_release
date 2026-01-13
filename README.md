@@ -353,8 +353,11 @@ Implement in `src/Q4_frameworks.py`:
 
 #### Q6a — SWAP Test (10)
 
-**Context.** The SWAP test estimates the **overlap** between two pure states $|\psi\rangle$ and $|\phi\rangle$. With an ancilla prepared in $|0\rangle$, after applying the circuit diagrammed in Q6a_SwapTest.py, we get:
-$P(\text{ancilla}=|0\rangle)=\dfrac{1+|\langle\psi|\phi\rangle|^2}{2}.$
+**Context.** The SWAP test estimates the **overlap** between two pure states $|\psi\rangle$ and $|\phi\rangle$. With an ancilla prepared in $|0\rangle$, after applying the circuit shown in Figure 1 below to the system:
+
+![SWAP test circuit](swap_circuit.png){ width=40% }
+
+At measurement we then get: $P(\text{ancilla}=|0\rangle)=\dfrac{1+|\langle\psi|\phi\rangle|^2}{2}.$
 
 **Objective.** Implement the SWAP test circuit in Qiskit to estimate the overlap between two single-qubit states in `src/Q6a_SwapTest.py`.
 
