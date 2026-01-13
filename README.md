@@ -42,7 +42,7 @@ You may choose to work **remotely** in GitHub Codespaces by following the steps 
 1. Click **Code → Codespaces → Create codespace on main**.
 2. Wait for setup. The image includes `pixi`, and dependencies for the current assignment will install automatically on first run.
 
-> GitHub Codespaces are currently limited to 120 hours/month per account. If you run out of hours, you can switch to local setup or another online development environment of your choice.
+> GitHub Codespaces are limited to 60 hours of active usage per month per account (wall-clock time, not CPU hours). If you reach this limit, you can continue the assignment using a local setup or another online development environment, we are trying to get more hours from GitHub for this course.
 
 Possible issues you may encounter:
 
