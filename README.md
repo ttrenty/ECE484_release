@@ -26,7 +26,7 @@ By completing this assignment, you will be able to:
    * the **Bernstein–Vazirani algorithm** (hidden bit-string recovery),
      and connect each implementation to its theoretical guarantee.
 
-> **Scope note (important):** Some questions introduce multi-qubit circuits earlier than the lecture sequence. For those parts, you are graded primarily on **correct construction and verification via simulation**, not on full tensor-product derivations.
+> **Scope note (important):** Some questions introduce multi-qubit circuits earlier than the lecture sequence. For those parts, you are graded primarily on **correct construction and verification via simulation**. Don't worry if you don't understand the multi-qubit circuit constructions, focus on understanding the programming frameworks.
 
 ***
 
