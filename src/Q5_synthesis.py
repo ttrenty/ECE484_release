@@ -13,24 +13,25 @@ def prepare_single(theta: float, phi: float) -> QuantumCircuit:
     """
     Prepare |psi(theta, phi)> = cos(theta/2)|0> + e^{i phi} sin(theta/2)|1> from |0>.
 
-    If your student number is even, implement Variant A, use only gates RY and RZ.
-    If your student number is odd, implement Variant B, use only the U gate.
+    Implement using the generic U gate.
 
     Return:
         QuantumCircuit with 1 qubit and 0 classical bits (no measurements).
     """
-    # TODO: Implement per your assigned variant (A or B).
+    # TODO: Implement.
     raise NotImplementedError("prepare_single not implemented")
 
 
-def prepare_bell(kind: str) -> QuantumCircuit:
+def prepare_bell(subscript: str) -> QuantumCircuit:
     """
-    kind in {"phi+", "phi-", "psi+", "psi-"}.
-    Implement `prepare_bell(kind) -> QuantumCircuit` to prepare Bell states from $|00\rangle$ using only $H$ and $CX$:
-    Returns a 2-qubit circuit (no measurements) that prepares the requested Bell state from |00>.
+    subscript in {"00", "10", "01", "11"}, corresponding to Bell states {"phi+", "phi-", "psi+", "psi-"} respectively.
+    
+    Implement `prepare_bell(subscript) -> QuantumCircuit` to prepare Bell states from $|00\rangle$ using only $H$ and $CX$:
+    
+    Return:
+        QuantumCircuit with 2 qubits and 0 classical bits (no measurements) that prepares the requested Bell state from |00>.
     """
     # TODO: Implement this function
-    k = kind.strip().lower()
     raise NotImplementedError("prepare_bell not implemented")
 
 
@@ -40,5 +41,5 @@ def unitary_equal(
     """
     Compare unitaries modulo global phase.
     """
-    # TODO: Implement this function, find the one method to use in qiskit.quantum_info.Operator.
+    # TODO: Implement this function, using qiskit.quantum_info.Operator and one of its methods.
     raise NotImplementedError("unitary_equal not implemented")
