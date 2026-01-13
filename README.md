@@ -309,18 +309,18 @@ This question builds intuition for “phase kickback” using **eigenstates**. Y
 
 ### Q4 — Frameworks Mini-Comparison (Qiskit & PennyLane) (20, Bonus +10)
 
-**Objective.** Gain experience with two different quantum programming frameworks: `Qiskit` (IBM’s circuits-as-objects) and `PennyLane` (Xanadu’s circuits-as-functions). Both support statevector simulation. Inside the file `src/Q4_frameworks.py`, implement functions that prepare the same 2-qubit target state from **Q2** using both frameworks, and compare results.
+**Objective.** Gain experience with two different quantum programming frameworks: `Qiskit` (IBM’s circuits-as-objects) and `PennyLane` (Xanadu’s circuits-as-functions). Both support statevector simulation. Inside the file `src/Q4_frameworks.py`, implement functions that prepare the same 2-qubit target state from **Q2** using both frameworks, and compare results. The following pages may help: [Qiskit documentation](https://quantum.cloud.ibm.com/docs/en/api/qiskit), [PennyLane documentation](https://docs.pennylane.ai/en/stable/). 
 
 Implement in `src/Q4_frameworks.py`:
 
 1. `build_target_state_qiskit(theta, phi) -> np.ndarray`
-   Build the circuit preparing $|\Psi(\theta,\phi)\rangle$ and return the **statevector** (length 4 complex NumPy array).
+   Build the circuit from Q2 that prepares $|\Psi(\theta,\phi)\rangle$, and return the a length 4 complex NumPy array that represents the **statevector**.
 
 2. `build_target_state_pennylane(theta, phi) -> np.ndarray`
-   Do the same in PennyLane (`default.qubit`) and return the statevector.
+   Do the same in PennyLane (`default.qubit`) and return a NumPy array representation of the statevector.
 
 3. **(Bonus)** `build_target_state_numpy(theta, phi) -> np.ndarray`
-   Construct matrices for $CX$, $R_Z$, $R_X$ and multiply them on $|00\rangle$ using NumPy only.
+   Construct NumPy matrices for $CX$, $R_Z$, $R_X$ and multiply them on $|00\rangle$, returning the same NumPy array as the previous two points.
 
 4. **Short written reflection.**
    Give one pro & one con for each framework; which felt more natural for you and why? Which one seems easier to extend the circuit? Your choices will not impact your grading as long as they are justified.
