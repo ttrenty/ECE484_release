@@ -335,17 +335,17 @@ Implement in `src/Q4_frameworks.py`:
 
 **Objective.** Implement state preparation circuits for single-qubit states and Bell states, and a helper function to compare unitaries up to global phase. Complete the functions in `src/Q5_synthesis.py`.
 
-1. Implement `prepare_single(theta, phi) -> QuantumCircuit` to prepare $|\psi(\theta,\phi)\rangle$ from **Q1**, starting from state $|0\rangle$. Twist: If your student number is even, you must use the gate set ${R_Y, R_Z}$; if odd, you must use the gate set ${U}$, where $U(\theta,\phi,\lambda)$ is the general single-qubit unitary.
+1. Implement `prepare_single(theta, phi) -> QuantumCircuit` to prepare $|\psi(\theta,\phi)\rangle$ from **Q1**, starting from state $|0\rangle$, using the $U$ gate, where $U(\theta,\phi,\lambda)$ is the general single-qubit unitary.
 
 2. Implement `prepare_bell(kind) -> QuantumCircuit` to prepare Bell states from $|00\rangle$ using only gates in the set ${H, X, Z, CX}$:
 
-   * $|\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt{2}}$
-   * $|\Phi^-\rangle=\frac{|00\rangle-|11\rangle}{\sqrt{2}}$
-   * $|\Psi^+\rangle=\frac{|01\rangle+|10\rangle}{\sqrt{2}}$
-   * $|\Psi^-\rangle=\frac{|01\rangle-|10\rangle}{\sqrt{2}}$
+   * $|\beta_{00}> = |\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt{2}}$
+   * $|\beta_{10}> = |\Phi^-\rangle=\frac{|00\rangle-|11\rangle}{\sqrt{2}}$
+   * $|\beta_{01}> = |\Psi^+\rangle=\frac{|01\rangle+|10\rangle}{\sqrt{2}}$
+   * $|\beta_{11}> = |\Psi^-\rangle=\frac{|01\rangle-|10\rangle}{\sqrt{2}}$
 
-3. Implement `unitary_equal(circA, circB, tol)` to check whether two quantum circuits implement thesame unitary, i.e. are equivalent, up to a global phase.
-    Tips: Read the documentation for `qiskit.quantum_info.Operator` carefully, you only need one of its methods to implement this function.
+3. Implement `unitary_equal(circA, circB, tol)` to check whether two quantum circuits implement the same unitary, i.e. are equivalent up to a global phase.
+    Tips: Read the documentation for `qiskit.quantum_info.Operator` carefully, you only need its constructor and one of its methods to implement this function.
 
 ***
 
