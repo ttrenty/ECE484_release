@@ -295,15 +295,15 @@ You may only use the gate set ${CX, R_Z, R_X}$ and start from the **initial quan
 
 ### Q3 — Phase Kickback via Controlled Rotation $\mathrm{CR}_X(\varphi)$ (10)
 
-This question builds intuition for “phase kickback” using **eigenstates**. You may use the controlled-operators definition from the prerequisites.
+This question builds intuition for the “phase kickback” effect. You may use the controlled-operators definition from the prerequisites.
 
-1. Show that the CZ gate is symmetric, i.e., control and target may be swapped without changing the operator (up to global phase). Tip: You may use the matrix definition of CZ and apply it to the 2-qubit computational basis states. You may argue from its action on $|00\rangle,|01\rangle,|10\rangle,|11\rangle$.
+1. Show that the CZ gate is symmetric, i.e., control and target may be swapped without changing the operator (up to global phase). Tip: You may use the matrix definition of CZ and apply it to each element of the 2-qubit computational basis ($|00\rangle,|01\rangle,|10\rangle,|11\rangle$), then argue from linearity.
 2. Consider $\mathrm{CR}_X(\varphi)$ (Controlled-Rotation-X), where the control is initially in state $|+\rangle$ and the target is initially in state $|+\rangle$.
 
    1. Show that after applying $\mathrm{CR}_X(\varphi)$ the control acquires a relative phase that depends on $\varphi$. (Note that, since $|+\rangle$ is an $X$-eigenstate with eigenvalue $+1$ and $R_X(\varphi)=e^{-i\varphi X/2}$, we have $R_X(\varphi)|+\rangle = e^{-i\varphi/2}|+\rangle$.)
    2. Then apply a Hadamard $H$ to the **control** and measure only the control qubit in the computational ($Z$) basis.
       Give $P(|0\rangle_c)$ and $P(|1\rangle_c)$ in terms of $\varphi$.
-   3. Briefly interpret the “phase-kickback” effect.
+   3. What do you notice from the above? Give a briefly interpretation of this “phase-kickback” effect.
 
 ***
 
