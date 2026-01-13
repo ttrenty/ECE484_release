@@ -25,7 +25,7 @@ def swap_test_noiseless(psi: QuantumCircuit, phi: QuantumCircuit) -> float:
     """
     # TODO: Implement the SWAP test circuit using AerSimulator's save_probabilities
     # Hint:
-    # 1. Create a circuit with 1 ancilla + n qubits for psi + n qubits for phi, where you must find what n should be
+    # 1. Create a circuit with 1 ancilla + n qubits for psi + n qubits for phi, where you must extract the number of qubits n from the given QuantumCircuit objects psi and phi.
     # 2. Apply H to ancilla
     # 3. Compose psi and phi circuits onto their respective registers using the method .compose(...)
     # 4. Apply controlled-SWAP between corresponding qubits of psi and phi registers using qc.cswap(control, target1, target2)
@@ -48,7 +48,7 @@ def swap_test_noisy(
     """
     # TODO: Implement the SWAP test circuit using AerSimulator with noise from FakeManilaV2
     # Hint:
-    # 1. Create a circuit as previously but allocate 1 classical bit for measuring the ancilla only
+    # 1. Create a circuit as previously but allocate 1 classical bit for measuring the ancilla
     # 2. Apply the same steps as before to build the SWAP test circuit
     # 3. Measure the ancilla into the classical bit using the method qc.measure(ancilla_index, classical_bit_index)
     # 4. Create a noisy simulator using AerSimulator.from_backend(FakeManilaV2())
