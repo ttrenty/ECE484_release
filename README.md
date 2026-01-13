@@ -314,13 +314,13 @@ This question builds intuition for “phase kickback” using **eigenstates**. Y
 Implement in `src/Q4_frameworks.py`:
 
 1. `build_target_state_qiskit(theta, phi) -> np.ndarray`
-   Build the circuit from Q2 that prepares $|\Psi(\theta,\phi)\rangle$, and return the a length 4 complex NumPy array that represents the **statevector**.
+   Build the circuit from Q2 that prepares $|\Psi(\theta,\phi)\rangle$, and return the a length 4 complex NumPy array that represents the final **statevector**.
 
 2. `build_target_state_pennylane(theta, phi) -> np.ndarray`
-   Do the same in PennyLane (`default.qubit`) and return a NumPy array representation of the statevector.
+   Do the same in PennyLane (`default.qubit`) and return a NumPy array representation of the final statevector.
 
 3. **(Bonus)** `build_target_state_numpy(theta, phi) -> np.ndarray`
-   Construct NumPy matrices for $CX$, $R_Z$, $R_X$ and multiply them on $|00\rangle$, returning the same NumPy array as the previous two points.
+   Construct NumPy matrices for $CX$, $R_Z$, and $R_X$, then build the corresponding two-qubit operators and apply them starting from the statevector $|00\rangle$. You should obtain the same final NumPy array as in the previous two points.
 
 4. **Short written reflection.**
    Give one pro & one con for each framework; which felt more natural for you and why? Which one seems easier to extend the circuit? Your choices will not impact your grading as long as they are justified.

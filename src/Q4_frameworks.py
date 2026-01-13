@@ -53,10 +53,10 @@ def build_target_state_pennylane(theta: float, phi: float) -> np.ndarray:
 def build_target_state_numpy(theta: float, phi: float) -> np.ndarray:
     """
     Returns the state but using your own NumPy matrix operations only.
-    4x4 matrices for 2-qubit gates can be built via Kronecker products of 2x2 gates (kron from utils.py).
+    4x4 matrices for 2-qubit gates can be built via Kronecker products of two 2x2 gates (kron from utils.py).
     """
     # TODO (BONUS): Implement this function using only NumPy matrix operations
     # Define the necessary gate matrices: RY, RZ, CX, I2 (2x2 identity). Those can be helper functions.
     # Start with |00> = np.array([1, 0, 0, 0])
-    # Hint: Use the helper functions `kron` from utils to create 4x4 matrices (2-qubits gates). Apply gates: kron(RY(theta), I2()), followed by CX, followed by kron(I2(), RZ(phi))
+    # Hint: Use the helper functions `kron` from utils to create 4x4 matrices (2-qubits gates). Apply gates: kron(RY(theta), I2()); meaning RY on qubit 0, identity on qubit 1, followed by CX, followed by kron(I2(), RZ(phi))
     raise NotImplementedError("build_target_state_numpy (bonus) not implemented")
